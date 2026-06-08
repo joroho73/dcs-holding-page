@@ -1,9 +1,15 @@
+/* Dunmow Computer Services - Holding Page Styles */
+
 :root {
     --primary: #13233f;
+    --primary-light: #1d335c;
     --secondary: #52b45a;
     --background: #f8fafc;
     --text: #333333;
+    --muted: #5f6f82;
     --white: #ffffff;
+    --border: #e5eaf0;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
 }
 
 * {
@@ -22,132 +28,284 @@ body {
 .container {
     width: 90%;
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
 }
 
+/* Header */
+
+.site-header {
+    background: var(--white);
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.site-logo {
+    width: 140px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.site-header h1 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+.tagline {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+/* Hero */
+
 .hero {
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        #1d335c
-    );
-    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    padding: 70px 20px;
 }
 
 .hero-card {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
+    background: var(--white);
     padding: 50px;
-    border-radius: 16px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
-
-.logo img {
-    width: 120px;
-    max-width: 100%;
-    margin-bottom: 30px;
 }
 
 .hero-card h2 {
     color: var(--primary);
-    font-size: 2.4rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-card .intro {
-    color: #555;
-    max-width: 650px;
-    margin: 0 auto 30px auto;
+    color: var(--muted);
+    max-width: 720px;
+    margin: 0 auto 30px;
     font-size: 1.2rem;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.logo-icon {
-    font-size: 3rem;
-}
-
-.logo h1 {
-    margin-bottom: 5px;
-}
-
-.tagline {
-    color: #d0d7e2;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.intro {
-    max-width: 700px;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
+/* Buttons */
 
 .buttons {
     display: flex;
     gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 6px;
+    padding: 13px 26px;
+    border-radius: 8px;
     font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .btn-primary {
     background: var(--secondary);
-    color: white;
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #459c4c;
 }
 
 .btn-secondary {
-    background: white;
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--white);
 }
+
+.btn-secondary:hover {
+    background: var(--primary-light);
+}
+
+/* Sections */
 
 section {
     padding: 60px 0;
 }
 
 section h2 {
-    margin-bottom: 25px;
     color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Services */
+
+.services {
+    background: var(--background);
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
-    border-top: 4px solid var(--secondary);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: var(--white);
+    padding: 28px;
+    border-radius: 10px;
+    border-top: 5px solid var(--secondary);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-.about,
-.contact {
-    background: white;
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
 }
+
+/* About */
+
+.about {
+    background: var(--white);
+}
+
+.about p {
+    max-width: 850px;
+    margin-bottom: 16px;
+}
+
+/* Contact */
+
+.contact {
+    background: var(--background);
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-item i {
+    color: var(--secondary);
+    width: 24px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact-item a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: var(--secondary);
+}
+
+/* About */
+.about {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        flex: none;
+    }
+
+    .about-image img {
+        max-width: 220px;
+    }
+}
+
+/* Footer */
 
 footer {
     background: var(--primary);
-    color: white;
+    color: var(--white);
     text-align: center;
-    padding: 20px;
+    padding: 24px 0;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-logo {
+        width: 120px;
+    }
+
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 40px 16px;
+    }
+
+    .hero-card {
+        padding: 32px 22px;
+    }
+
+    .hero-card .intro {
+        font-size: 1.05rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
