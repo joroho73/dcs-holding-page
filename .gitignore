@@ -1,5 +1,18 @@
+# Git
+.git
+
+# VS Code
 .vscode/
-*.log
-*~
-.DS_Store
+
+# Windows
 Thumbs.db
+*.Identifier
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*~
