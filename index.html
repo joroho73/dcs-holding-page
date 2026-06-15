@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-92GT0N6XGF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-92GT0N6XGF');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dunmow Computer Services</title>
@@ -20,10 +29,8 @@
                 <h1>Dunmow Computer Services</h1>
                 <p class="tagline">Helping local people and businesses get more from technology.</p>
                 <p class="header-phone">
-                    <a href="tel:07356013282">
-                        <i class="fa-solid fa-phone"></i>
-                        07356 013282
-                    </a>
+                    <i class="fa-solid fa-phone"></i>
+                    <a  href="tel:07356013282" onclick="gtag('event', 'phone_click', {'link_location': 'header'});">07356 013282</a>
                 </p>
             </div>
         </div>
@@ -43,8 +50,8 @@
                     </p>
 
                     <div class="buttons">
-                        <a href="tel:07356013282" class="btn btn-primary">Call Today</a>
-                        <a href="mailto:dunmowcomputerservices@gmail.com" class="btn btn-secondary">Email Us</a>
+                        <a href="tel:07356013282" class="btn btn-primary" onclick="gtag('event', 'phone_click', {'link_location': 'hero_button'});">Call Today</a>
+                        <a href="mailto:dunmowcomputerservices@gmail.com" class="btn btn-secondary" onclick="gtag('event', 'email_click', {'link_location': 'hero_button'});">Email Us</a>
                     </div>
                 </div>
 
@@ -138,12 +145,12 @@
 
     <div class="contact-item">
         <i class="fa-solid fa-phone"></i>
-        <a href="tel:07356013282">07356 013282</a>
+        <a href="tel:07356013282" onclick="gtag('event', 'phone_click', {'link_location': 'contact'});">07356 013282</a>
     </div>
 
     <div class="contact-item">
         <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:dunmowcomputerservices@gmail.com">
+        <a href="mailto:dunmowcomputerservices@gmail.com" onclick="gtag('event', 'email_click', {'link_location': 'contact'});">
             dunmowcomputerservices@gmail.com
         </a>
     </div>
